@@ -31,7 +31,7 @@ Change From airport
 
 Change To airport
     Log    This keyword will change the default text in the To field to the desired text passed to the Input Text sub keyword.
-    Wait Until Element is Visible    ${TO
+    Wait Until Element is Visible    ${TO}
     Clear Element Text    ${TO}
     Input Text    ${TO}    SMF
 
