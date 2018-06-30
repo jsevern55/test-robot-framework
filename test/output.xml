@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180629 14:43:12.908" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="c:\docker-robot-framework\test\Hotel_Citywide_Test_Case_1.robot" id="s1" name="Hotel Citywide Test Case 1">
+<kw type="setup" name="Set up">
+<kw name="Open Browser and Go to URL" library="resource-Chrome">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:13.087" level="INFO">Opening browser 'Chrome' to base url 'https://www.clicktripz.com/test.php'.</msg>
+<status status="PASS" endtime="20180629 14:43:20.548" starttime="20180629 14:43:13.087"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180629 14:43:21.681" starttime="20180629 14:43:20.548"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:21.682" starttime="20180629 14:43:21.681"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:21.682" starttime="20180629 14:43:13.086"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:21.682" starttime="20180629 14:43:13.086"></status>
+</kw>
+<test id="s1-t1" name="Change City">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This keyword will change the default text in the City field to the desired text passed to the Input Text sub keyword.</arg>
+</arguments>
+<msg timestamp="20180629 14:43:21.684" level="INFO">This keyword will change the default text in the City field to the desired text passed to the Input Text sub keyword.</msg>
+<status status="PASS" endtime="20180629 14:43:21.684" starttime="20180629 14:43:21.683"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CITY}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:21.727" starttime="20180629 14:43:21.684"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${CITY}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:21.769" starttime="20180629 14:43:21.729"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CITY}</arg>
+<arg>Manhattan Beach, CA</arg>
+</arguments>
+<msg timestamp="20180629 14:43:21.772" level="INFO">Typing text 'Manhattan Beach, CA' into text field 'xpath=//label[contains(text(), "City")]/following-sibling::div/input'.</msg>
+<status status="PASS" endtime="20180629 14:43:21.929" starttime="20180629 14:43:21.772"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:21.930" critical="yes" starttime="20180629 14:43:21.682"></status>
+</test>
+<test id="s1-t2" name="Change Check-In Date">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This keyword will change the Check-In date on the Check-In field.</arg>
+</arguments>
+<msg timestamp="20180629 14:43:21.934" level="INFO">This keyword will change the Check-In date on the Check-In field.</msg>
+<status status="PASS" endtime="20180629 14:43:21.934" starttime="20180629 14:43:21.933"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CHECKIN}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:21.976" starttime="20180629 14:43:21.934"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECKIN}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:21.977" level="INFO">Clicking button 'xpath=//label[contains(text(), "Check-in")]/following-sibling::div/input'.</msg>
+<status status="PASS" endtime="20180629 14:43:22.215" starttime="20180629 14:43:21.976"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${DATEPICKER}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:22.262" starttime="20180629 14:43:22.215"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Friday the 13th 2018 is the day to be selected</arg>
+</arguments>
+<msg timestamp="20180629 14:43:22.263" level="INFO">Friday the 13th 2018 is the day to be selected</msg>
+<status status="PASS" endtime="20180629 14:43:22.263" starttime="20180629 14:43:22.262"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='ui-datepicker-div']/descendant::a[contains(text(), '13')]</arg>
+</arguments>
+<msg timestamp="20180629 14:43:22.263" level="INFO">Clicking element 'xpath=//div[@id='ui-datepicker-div']/descendant::a[contains(text(), '13')]'.</msg>
+<status status="PASS" endtime="20180629 14:43:22.446" starttime="20180629 14:43:22.263"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DATEPICKER}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:22.929" starttime="20180629 14:43:22.447"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:22.930" critical="yes" starttime="20180629 14:43:21.932"></status>
+</test>
+<test id="s1-t3" name="Change Check-Out Date">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This keyword will change the Check-Out date on the Check-Out field.</arg>
+</arguments>
+<msg timestamp="20180629 14:43:22.933" level="INFO">This keyword will change the Check-Out date on the Check-Out field.</msg>
+<status status="PASS" endtime="20180629 14:43:22.933" starttime="20180629 14:43:22.933"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CHECKOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:22.969" starttime="20180629 14:43:22.934"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECKOUT}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:22.970" level="INFO">Clicking button 'xpath=//label[contains(text(), "Check-out")]/following-sibling::div/input'.</msg>
+<status status="PASS" endtime="20180629 14:43:23.040" starttime="20180629 14:43:22.970"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${DATEPICKER}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:23.068" starttime="20180629 14:43:23.041"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Sunday the 15th 2018 is the day to be selected</arg>
+</arguments>
+<msg timestamp="20180629 14:43:23.070" level="INFO">Sunday the 15th 2018 is the day to be selected</msg>
+<status status="PASS" endtime="20180629 14:43:23.071" starttime="20180629 14:43:23.069"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='ui-datepicker-div']/descendant::a[contains(text(), '15')]</arg>
+</arguments>
+<msg timestamp="20180629 14:43:23.072" level="INFO">Clicking element 'xpath=//div[@id='ui-datepicker-div']/descendant::a[contains(text(), '15')]'.</msg>
+<status status="PASS" endtime="20180629 14:43:23.191" starttime="20180629 14:43:23.072"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DATEPICKER}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:23.884" starttime="20180629 14:43:23.192"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:23.885" critical="yes" starttime="20180629 14:43:22.932"></status>
+</test>
+<test id="s1-t4" name="Set number of Guests">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This keyword will set the number of Guests to 2</arg>
+</arguments>
+<msg timestamp="20180629 14:43:23.889" level="INFO">This keyword will set the number of Guests to 2</msg>
+<status status="PASS" endtime="20180629 14:43:23.889" starttime="20180629 14:43:23.889"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${GUESTS}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:23.928" starttime="20180629 14:43:23.890"></status>
+</kw>
+<kw name="Select From List" library="SeleniumLibrary">
+<doc>Deprecated. Use `Select From List By Label/Value/Index` instead.</doc>
+<arguments>
+<arg>${GUESTS}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180629 14:43:23.929" level="INFO">Selecting option(s) '2' from list 'xpath=//label[contains(text(), "Guests")]/following-sibling::div/select'.</msg>
+<status status="PASS" endtime="20180629 14:43:24.027" starttime="20180629 14:43:23.929"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:24.029" critical="yes" starttime="20180629 14:43:23.888"></status>
+</test>
+<test id="s1-t5" name="Search Hotels">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SEARCHBUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:24.076" starttime="20180629 14:43:24.036"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCHBUTTON}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:24.078" level="INFO">Clicking button 'xpath=//button[contains(text(), "Search Hotels")]'.</msg>
+<status status="PASS" endtime="20180629 14:43:24.197" starttime="20180629 14:43:24.078"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:24.199" critical="yes" starttime="20180629 14:43:24.034"></status>
+</test>
+<test id="s1-t6" name="Minimize main window">
+<kw name="Minimize Window" library="resource-Chrome">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Setting window size to 0 x 0 pixels. Minimize browser not supported in selenium webdriver. Only Maximize is supported.</arg>
+</arguments>
+<msg timestamp="20180629 14:43:24.207" level="INFO">Setting window size to 0 x 0 pixels. Minimize browser not supported in selenium webdriver. Only Maximize is supported.</msg>
+<status status="PASS" endtime="20180629 14:43:24.207" starttime="20180629 14:43:24.206"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>0</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:24.471" starttime="20180629 14:43:24.207"></status>
+</kw>
+<kw name="Set Window Position" library="SeleniumLibrary">
+<doc>Sets window position using ``x`` and ``y`` coordinates.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1080</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:24.576" starttime="20180629 14:43:24.471"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:24.577" starttime="20180629 14:43:24.205"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:24.577" critical="yes" starttime="20180629 14:43:24.203"></status>
+</test>
+<test id="s1-t7" name="Switch to Exit Unit Window">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This keyword will Switch windows</arg>
+</arguments>
+<msg timestamp="20180629 14:43:24.580" level="INFO">This keyword will Switch windows</msg>
+<status status="PASS" endtime="20180629 14:43:24.580" starttime="20180629 14:43:24.580"></status>
+</kw>
+<kw name="Change Windows" library="resource-Chrome">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${window}</var>
+</assign>
+<msg timestamp="20180629 14:43:25.826" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:25.827" level="INFO">${window} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:25.827" starttime="20180629 14:43:24.581"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:25.827" level="INFO">1</msg>
+<status status="PASS" endtime="20180629 14:43:25.828" starttime="20180629 14:43:25.827"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{window}[${number}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:25.898" starttime="20180629 14:43:25.828"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${URL}</var>
+</assign>
+<msg timestamp="20180629 14:43:25.909" level="INFO">${URL} = https://www.clicktripz.com/rates/search/index.php?city=Manhattan%20Beach%2C%20CA&amp;checkInDate=07/13/2018&amp;checkOutDate=07/15/2018&amp;rooms=1&amp;guests=2&amp;publisherID=4&amp;referralURL=http%3A%2F%2Fwww.travbuddy.co...</msg>
+<status status="PASS" endtime="20180629 14:43:25.909" starttime="20180629 14:43:25.898"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:25.909" starttime="20180629 14:43:24.581"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_window_1.png</arg>
+</arguments>
+<msg timestamp="20180629 14:43:26.182" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_window_1.png"&gt;&lt;img src="clicktripz_hotel_ad_window_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:43:26.182" starttime="20180629 14:43:25.909"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:26.183" critical="yes" starttime="20180629 14:43:24.579"></status>
+</test>
+<test id="s1-t8" name="Click Show me the first deal and maximize window">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWMEBUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:27.146" starttime="20180629 14:43:26.190"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SHOWMEBUTTON}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:27.147" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Show me the first deal!')]'.</msg>
+<status status="PASS" endtime="20180629 14:43:27.902" starttime="20180629 14:43:27.146"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180629 14:43:28.064" starttime="20180629 14:43:27.902"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180629 14:43:30.066" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180629 14:43:30.066" starttime="20180629 14:43:28.064"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_window_2.png</arg>
+</arguments>
+<msg timestamp="20180629 14:43:38.279" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_window_2.png"&gt;&lt;img src="clicktripz_hotel_ad_window_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:43:38.279" starttime="20180629 14:43:30.068"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:38.281" critical="yes" starttime="20180629 14:43:26.188"></status>
+</test>
+<test id="s1-t9" name="Click through Travel agency tabs">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:38.331" starttime="20180629 14:43:38.285"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="SeleniumLibrary">
+<doc>Deprecated. Use `Get Element Count` instead.</doc>
+<arguments>
+<arg>${TABXPATHCOUNT}</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20180629 14:43:38.344" level="INFO">${x} = 7</msg>
+<status status="PASS" endtime="20180629 14:43:38.344" starttime="20180629 14:43:38.332"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${x}+1</arg>
+</arguments>
+<assign>
+<var>${AllTabs}</var>
+</assign>
+<msg timestamp="20180629 14:43:38.345" level="INFO">${AllTabs} = 8</msg>
+<status status="PASS" endtime="20180629 14:43:38.346" starttime="20180629 14:43:38.345"></status>
+</kw>
+<kw type="for" name="${tabs} IN RANGE [ 1 | ${AllTabs} ]">
+<kw type="foritem" name="${tabs} = 1">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:43:38.455" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:38.455" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:38.455" starttime="20180629 14:43:38.347"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:38.545" starttime="20180629 14:43:38.456"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:38.545" starttime="20180629 14:43:38.456"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:38.571" starttime="20180629 14:43:38.546"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:38.572" level="INFO">Clicking element 'xpath=//li[1]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:43:38.685" starttime="20180629 14:43:38.572"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:43:43.685" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:43:43.685" starttime="20180629 14:43:38.685"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:43:43.784" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:43.784" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:43.785" starttime="20180629 14:43:43.685"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:43.785" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:43.785" level="INFO">${StartingWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:43.785" starttime="20180629 14:43:43.785"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:43.785" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:43.786" level="INFO">${NewWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:43.786" starttime="20180629 14:43:43.785"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:43:43.786" level="INFO">${IndexedWindow} = 1</msg>
+<status status="PASS" endtime="20180629 14:43:43.786" starttime="20180629 14:43:43.786"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:43.786" starttime="20180629 14:43:43.786"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:43:44.191" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_1.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:43:44.191" starttime="20180629 14:43:43.787"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:44.191" starttime="20180629 14:43:38.346"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 2">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:43:44.285" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:44.285" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:44.285" starttime="20180629 14:43:44.192"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:44.380" starttime="20180629 14:43:44.285"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:44.380" starttime="20180629 14:43:44.285"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:44.402" starttime="20180629 14:43:44.381"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:44.403" level="INFO">Clicking element 'xpath=//li[2]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:43:45.028" starttime="20180629 14:43:44.402"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:43:50.028" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:43:50.028" starttime="20180629 14:43:45.028"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:43:50.191" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:50.191" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:50.191" starttime="20180629 14:43:50.028"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:50.192" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:50.192" level="INFO">${StartingWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:50.192" starttime="20180629 14:43:50.191"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:50.192" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:50.192" level="INFO">${NewWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:50.192" starttime="20180629 14:43:50.192"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:43:50.193" level="INFO">${IndexedWindow} = 1</msg>
+<status status="PASS" endtime="20180629 14:43:50.193" starttime="20180629 14:43:50.192"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:50.193" starttime="20180629 14:43:50.193"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:43:50.626" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_2.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:43:50.626" starttime="20180629 14:43:50.193"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:50.626" starttime="20180629 14:43:44.191"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 3">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:43:50.768" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:50.768" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:50.768" starttime="20180629 14:43:50.626"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:50.928" starttime="20180629 14:43:50.769"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:50.928" starttime="20180629 14:43:50.768"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:50.958" starttime="20180629 14:43:50.928"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:50.958" level="INFO">Clicking element 'xpath=//li[3]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:43:51.279" starttime="20180629 14:43:50.958"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:43:56.280" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:43:56.280" starttime="20180629 14:43:51.280"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:43:56.407" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:56.407" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:56.407" starttime="20180629 14:43:56.280"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:56.408" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:56.408" level="INFO">${StartingWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:56.408" starttime="20180629 14:43:56.407"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:43:56.408" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:43:56.409" level="INFO">${NewWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:43:56.409" starttime="20180629 14:43:56.408"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:43:56.409" level="INFO">${IndexedWindow} = 1</msg>
+<status status="PASS" endtime="20180629 14:43:56.409" starttime="20180629 14:43:56.409"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:56.410" starttime="20180629 14:43:56.409"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:43:56.760" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_3.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:43:56.760" starttime="20180629 14:43:56.410"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:56.760" starttime="20180629 14:43:50.626"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 4">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:43:56.900" level="INFO">Altogether 2 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites</msg>
+<msg timestamp="20180629 14:43:56.900" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites']</msg>
+<status status="PASS" endtime="20180629 14:43:56.900" starttime="20180629 14:43:56.760"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:57.042" starttime="20180629 14:43:56.900"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:43:57.042" starttime="20180629 14:43:56.900"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:43:57.068" starttime="20180629 14:43:57.042"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:43:57.069" level="INFO">Clicking element 'xpath=//li[4]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:43:57.542" starttime="20180629 14:43:57.068"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:44:02.544" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:44:02.544" starttime="20180629 14:43:57.543"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:44:05.627" level="INFO">Altogether 3 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia</msg>
+<msg timestamp="20180629 14:44:05.628" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia']</msg>
+<status status="PASS" endtime="20180629 14:44:05.628" starttime="20180629 14:44:02.544"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:05.631" level="INFO">Length is 2</msg>
+<msg timestamp="20180629 14:44:05.631" level="INFO">${StartingWindowCount} = 2</msg>
+<status status="PASS" endtime="20180629 14:44:05.631" starttime="20180629 14:44:05.629"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:05.632" level="INFO">Length is 3</msg>
+<msg timestamp="20180629 14:44:05.632" level="INFO">${NewWindowCount} = 3</msg>
+<status status="PASS" endtime="20180629 14:44:05.633" starttime="20180629 14:44:05.631"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:44:05.633" level="INFO">${IndexedWindow} = 2</msg>
+<status status="PASS" endtime="20180629 14:44:05.633" starttime="20180629 14:44:05.633"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:05.944" starttime="20180629 14:44:05.635"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:05.944" starttime="20180629 14:44:05.634"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:44:06.340" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_4.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:44:06.341" starttime="20180629 14:44:05.944"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:06.341" starttime="20180629 14:43:56.760"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 5">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:44:06.652" level="INFO">Altogether 3 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia</msg>
+<msg timestamp="20180629 14:44:06.652" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia']</msg>
+<status status="PASS" endtime="20180629 14:44:06.652" starttime="20180629 14:44:06.341"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:06.795" starttime="20180629 14:44:06.653"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:06.795" starttime="20180629 14:44:06.652"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:06.831" starttime="20180629 14:44:06.796"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:44:06.832" level="INFO">Clicking element 'xpath=//li[5]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:44:07.291" starttime="20180629 14:44:06.831"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:44:12.291" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:44:12.291" starttime="20180629 14:44:07.291"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:44:15.811" level="INFO">Altogether 4 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk</msg>
+<msg timestamp="20180629 14:44:15.811" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk']</msg>
+<status status="PASS" endtime="20180629 14:44:15.811" starttime="20180629 14:44:12.291"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:15.812" level="INFO">Length is 3</msg>
+<msg timestamp="20180629 14:44:15.812" level="INFO">${StartingWindowCount} = 3</msg>
+<status status="PASS" endtime="20180629 14:44:15.812" starttime="20180629 14:44:15.812"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:15.813" level="INFO">Length is 4</msg>
+<msg timestamp="20180629 14:44:15.813" level="INFO">${NewWindowCount} = 4</msg>
+<status status="PASS" endtime="20180629 14:44:15.813" starttime="20180629 14:44:15.813"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:44:15.814" level="INFO">${IndexedWindow} = 3</msg>
+<status status="PASS" endtime="20180629 14:44:15.814" starttime="20180629 14:44:15.814"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:16.094" starttime="20180629 14:44:15.815"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:16.094" starttime="20180629 14:44:15.814"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:44:16.699" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_5.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:44:16.699" starttime="20180629 14:44:16.094"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:16.699" starttime="20180629 14:44:06.341"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 6">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:44:16.964" level="INFO">Altogether 4 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk</msg>
+<msg timestamp="20180629 14:44:16.964" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk']</msg>
+<status status="PASS" endtime="20180629 14:44:16.964" starttime="20180629 14:44:16.700"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:17.095" starttime="20180629 14:44:16.965"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:17.095" starttime="20180629 14:44:16.964"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:17.113" starttime="20180629 14:44:17.095"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:44:17.114" level="INFO">Clicking element 'xpath=//li[6]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:44:26.172" starttime="20180629 14:44:17.113"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:44:31.174" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:44:31.174" starttime="20180629 14:44:26.173"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:44:31.478" level="INFO">Altogether 4 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk</msg>
+<msg timestamp="20180629 14:44:31.478" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk']</msg>
+<status status="PASS" endtime="20180629 14:44:31.479" starttime="20180629 14:44:31.174"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:31.480" level="INFO">Length is 4</msg>
+<msg timestamp="20180629 14:44:31.480" level="INFO">${StartingWindowCount} = 4</msg>
+<status status="PASS" endtime="20180629 14:44:31.480" starttime="20180629 14:44:31.479"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:31.481" level="INFO">Length is 4</msg>
+<msg timestamp="20180629 14:44:31.481" level="INFO">${NewWindowCount} = 4</msg>
+<status status="PASS" endtime="20180629 14:44:31.481" starttime="20180629 14:44:31.480"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:44:31.482" level="INFO">${IndexedWindow} = 3</msg>
+<status status="PASS" endtime="20180629 14:44:31.482" starttime="20180629 14:44:31.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:31.483" starttime="20180629 14:44:31.483"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:44:31.829" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_6.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:44:31.829" starttime="20180629 14:44:31.484"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:31.830" starttime="20180629 14:44:16.699"></status>
+</kw>
+<kw type="foritem" name="${tabs} = 7">
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${StartingWindows}</var>
+</assign>
+<msg timestamp="20180629 14:44:32.081" level="INFO">Altogether 4 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk</msg>
+<msg timestamp="20180629 14:44:32.082" level="INFO">${StartingWindows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk']</msg>
+<status status="PASS" endtime="20180629 14:44:32.082" starttime="20180629 14:44:31.830"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Select Window</arg>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{StartingWindows}[1]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:32.231" starttime="20180629 14:44:32.083"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:32.231" starttime="20180629 14:44:32.082"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TABXPATH}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:32.261" starttime="20180629 14:44:32.232"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LI}[${tabs}]/${A}</arg>
+</arguments>
+<msg timestamp="20180629 14:44:32.261" level="INFO">Clicking element 'xpath=//li[7]/descendant::a[@data-tab-advertiser-name]'.</msg>
+<status status="PASS" endtime="20180629 14:44:32.818" starttime="20180629 14:44:32.261"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180629 14:44:37.820" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180629 14:44:37.820" starttime="20180629 14:44:32.819"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${windows}</var>
+</assign>
+<msg timestamp="20180629 14:44:43.210" level="INFO">Altogether 5 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk
+5: Manhattan Beach Hotel Search Results | Travelocity</msg>
+<msg timestamp="20180629 14:44:43.211" level="INFO">${windows} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk', u'Manhattan Beach Hotel Search R...</msg>
+<status status="PASS" endtime="20180629 14:44:43.211" starttime="20180629 14:44:37.820"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${StartingWindows}</arg>
+</arguments>
+<assign>
+<var>${StartingWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:43.212" level="INFO">Length is 4</msg>
+<msg timestamp="20180629 14:44:43.212" level="INFO">${StartingWindowCount} = 4</msg>
+<status status="PASS" endtime="20180629 14:44:43.212" starttime="20180629 14:44:43.211"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${NewWindowCount}</var>
+</assign>
+<msg timestamp="20180629 14:44:43.213" level="INFO">Length is 5</msg>
+<msg timestamp="20180629 14:44:43.213" level="INFO">${NewWindowCount} = 5</msg>
+<status status="PASS" endtime="20180629 14:44:43.213" starttime="20180629 14:44:43.212"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${NewWindowCount}-1</arg>
+</arguments>
+<assign>
+<var>${IndexedWindow}</var>
+</assign>
+<msg timestamp="20180629 14:44:43.214" level="INFO">${IndexedWindow} = 4</msg>
+<status status="PASS" endtime="20180629 14:44:43.214" starttime="20180629 14:44:43.213"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${NewWindowCount} &gt; ${StartingWindowCount}</arg>
+<arg>Select Window</arg>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{windows}[${IndexedWindow}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:43.694" starttime="20180629 14:44:43.215"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:43.694" starttime="20180629 14:44:43.214"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>clicktripz_hotel_ad_tab_${tabs}.png</arg>
+</arguments>
+<msg timestamp="20180629 14:44:44.072" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="clicktripz_hotel_ad_tab_7.png"&gt;&lt;img src="clicktripz_hotel_ad_tab_7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180629 14:44:44.072" starttime="20180629 14:44:43.695"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.072" starttime="20180629 14:44:31.830"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.072" starttime="20180629 14:43:38.346"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.073" critical="yes" starttime="20180629 14:43:38.284"></status>
+</test>
+<test id="s1-t10" name="Capture URL of Exit Unit">
+<kw name="Exit Unit URL Capture" library="resource-Chrome">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Change Windows</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Change Windows" library="resource-Chrome">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<assign>
+<var>${window}</var>
+</assign>
+<msg timestamp="20180629 14:44:44.484" level="INFO">Altogether 5 items.
+1: Hotel Citywide Test Form - Clicktripz
+2: Compare Travel Sites
+3: Manhattan Beach Hotel Search Results | Expedia
+4: Cheap Hotels, Deals, and Discounts | Hipmunk
+5: Manhattan Beach Hotel Search Results | Travelocity</msg>
+<msg timestamp="20180629 14:44:44.484" level="INFO">${window} = [u'Hotel Citywide Test Form - Clicktripz', u'Compare Travel Sites', u'Manhattan Beach Hotel Search Results | Expedia', u'Cheap Hotels, Deals, and Discounts | Hipmunk', u'Manhattan Beach Hotel Search R...</msg>
+<status status="PASS" endtime="20180629 14:44:44.484" starttime="20180629 14:44:44.078"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20180629 14:44:44.485" level="INFO">1</msg>
+<status status="PASS" endtime="20180629 14:44:44.485" starttime="20180629 14:44:44.484"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>@{window}[${number}]</arg>
+</arguments>
+<status status="PASS" endtime="20180629 14:44:44.606" starttime="20180629 14:44:44.485"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${URL}</var>
+</assign>
+<msg timestamp="20180629 14:44:44.610" level="INFO">${URL} = https://www.clicktripz.com/rates/search/index.php?city=Manhattan%20Beach%2C%20CA&amp;checkInDate=07/13/2018&amp;checkOutDate=07/15/2018&amp;rooms=1&amp;guests=2&amp;publisherID=4&amp;referralURL=http%3A%2F%2Fwww.travbuddy.co...</msg>
+<status status="PASS" endtime="20180629 14:44:44.611" starttime="20180629 14:44:44.606"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.611" starttime="20180629 14:44:44.077"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.611" starttime="20180629 14:44:44.077"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${ExitUnitURL}</var>
+</assign>
+<msg timestamp="20180629 14:44:44.622" level="INFO">${ExitUnitURL} = https://www.clicktripz.com/rates/search/index.php?city=Manhattan%20Beach%2C%20CA&amp;checkInDate=07/13/2018&amp;checkOutDate=07/15/2018&amp;rooms=1&amp;guests=2&amp;publisherID=4&amp;referralURL=http%3A%2F%2Fwww.travbuddy.co...</msg>
+<status status="PASS" endtime="20180629 14:44:44.622" starttime="20180629 14:44:44.611"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ExitUnitURL}</arg>
+</arguments>
+<msg timestamp="20180629 14:44:44.622" level="INFO">https://www.clicktripz.com/rates/search/index.php?city=Manhattan%20Beach%2C%20CA&amp;checkInDate=07/13/2018&amp;checkOutDate=07/15/2018&amp;rooms=1&amp;guests=2&amp;publisherID=4&amp;referralURL=http%3A%2F%2Fwww.travbuddy.com%2Ftest.php%3Fcity%3DLong%20Beach%2C%20CA&amp;type=1&amp;baseURL=https%3A%2F%2Fwww.clicktripz.com&amp;campaignIDs[0]=19810&amp;campaignIDs[1]=4353&amp;campaignIDs[2]=6275&amp;unchecked_campaignIDs[0]=3359&amp;unchecked_campaignIDs[1]=17868&amp;unchecked_campaignIDs[2]=3757&amp;unchecked_campaignIDs[3]=1700&amp;hostname=www.clicktripz.com&amp;isPopUnder=true&amp;searchKey=fa7d6ffb48c77dd30aa686a0e2932506&amp;auctionType=100&amp;productType=exit_unit&amp;maxSearchesPerDay=86400&amp;hardLimitSearchCap=9999&amp;hardLimitSearchCapSeconds=1&amp;searchDisplayType=4</msg>
+<status status="PASS" endtime="20180629 14:44:44.622" starttime="20180629 14:44:44.622"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.622" starttime="20180629 14:44:44.077"></status>
+</kw>
+<status status="PASS" endtime="20180629 14:44:44.623" critical="yes" starttime="20180629 14:44:44.076"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180629 14:44:47.815" starttime="20180629 14:44:44.626"></status>
+</kw>
+<doc>This is an automated test for Task 1 of the Click Tripz Automation Architecture Test: Hotel Citywide</doc>
+<status status="PASS" endtime="20180629 14:44:47.815" starttime="20180629 14:43:12.911"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="10">Critical Tests</stat>
+<stat fail="0" pass="10">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Hotel Citywide Test Case 1" pass="10">Hotel Citywide Test Case 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
