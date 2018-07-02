@@ -11,6 +11,8 @@ Both test cases will execute consecutively.
 Once the tests have finished, the logs and screenshots can be found in the reports directory (``test-robot-framework/reports``)
 For a detailed report, open ``log.html``
 
+The ``log.html`` file contains the rendered screenshots. The log, if there are no failures, will display completely collapsed. In order to see the screenshot, you will need to drill down through the collapsible elements within the log. If desired, you can uncollapse the entire log at the far right of the log file screen.
+
 For any questions, please contact jsevern55@outlook.com
 
 # A brief explanation as to why I chose Robot Framework...
