@@ -15,7 +15,7 @@ ${A}                    descendant::a[@data-tab-advertiser-name]
 Open Browser and Go to URL
     [Arguments]    ${URL}
     Open Browser    ${URL}    ${BROWSER}
-    #Maximize Browser Window
+    Maximize Browser Window
     Set Selenium Speed    0
 
 Minimize Window
