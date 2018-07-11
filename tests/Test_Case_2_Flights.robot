@@ -77,7 +77,7 @@ Switch to Exit Unit Window
 Click Show me the first deal and maximize window
     Wait Until Element is Visible    ${SHOWMEBUTTON}
     Click Element    ${SHOWMEBUTTON}
-    Maximize Browser Window
+    #Maximize Browser Window
     Sleep    2
     Capture Page Screenshot    clicktripz_flight_ad_window_2.png
 
