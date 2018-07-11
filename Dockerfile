@@ -1,6 +1,6 @@
 FROM fedora:28
 
-MAINTAINER Paul Podgorsek <ppodgorsek@users.noreply.github.com>
+MAINTAINER JR Severn <jsevern55@outlook.com>
 LABEL description Robot Framework in Docker.
 
 # Setup volumes for input and output

@@ -1,0 +1,10 @@
+*~
+
+# Eclipse
+.settings/
+.project
+
+# IntelliJ
+.idea/
+*.iml
+
