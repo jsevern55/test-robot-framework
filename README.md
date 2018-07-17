@@ -1,5 +1,7 @@
 # Robot Framework in Docker, with Firefox and Chrome
 
+Tribute to @ppodgorsek (https://github.com/ppodgorsek/docker-robot-framework)
+
 ## What is it?
 
 This project consists of a Docker image containing a Robot Framework installation.
