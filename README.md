@@ -58,36 +58,26 @@ RobotFramework supports many options such as `--exclude`, `--variable`, `--logle
 
 ## Testing this project
 
-Not convinced yet? Simple tests have been prepared in the `test/` folder, you can run them using the following commands:
+Not convinced yet? Simple tests have been prepared in the `tests/` folder, you can run them using the following commands:
 
-    # Using Chromium
+    # Using Chromium    
     docker run \
+        --shm-size=1g \
         -v `pwd`/reports:/opt/robotframework/reports:Z \
-        -v `pwd`/test:/opt/robotframework/tests:Z \
+        -v `pwd`/tests:/opt/robotframework/tests:Z \
         -e BROWSER=chrome \
-        jsevern55/test-robot-framework
-
-    # Using Firefox
-    docker run \
-        -v `pwd`/reports:/opt/robotframework/reports:Z \
-        -v `pwd`/test:/opt/robotframework/tests:Z \
-        -e BROWSER=firefox \
+        -e TEST_CASE=/opt/robotframework/tests/[Insert_name_of_test_case_here].robot \
         jsevern55/test-robot-framework
 
 For Windows users who use **PowerShell**, the commands are slightly different:
 
     # Using Chromium
     docker run \
+        --shm-size=1g \
         -v ${PWD}/reports:/opt/robotframework/reports:Z \
-        -v ${PWD}/test:/opt/robotframework/tests:Z \
+        -v ${PWD}/tests:/opt/robotframework/tests:Z \
         -e BROWSER=chrome \
-        jsevern55/test-robot-framework
-
-    # Using Firefox
-    docker run \
-        -v ${PWD}/reports:/opt/robotframework/reports:Z \
-        -v ${PWD}/test:/opt/robotframework/tests:Z \
-        -e BROWSER=firefox \
+        -e TEST_CASE=/opt/robotframework/tests/[Insert_name_of_test_case_here].robot \
         jsevern55/test-robot-framework
 
 Screenshots of the results will be available in the `reports/` folder.
